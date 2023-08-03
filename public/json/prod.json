@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "esecias",
+        "descripcion": "Frasquitos con esencias de varios perfumes",
+        "imagenCard": "https://firebasestorage.googleapis.com/v0/b/velas-aromaticas-ca1e6.appspot.com/o/img%2FpruebaTiaVelas.jpeg?alt=media&token=efd8a286-789c-4b67-a9ef-415b69add1a1",
+        "esencia": "Lavanda",
+        "esencia1": "Limón",
+        "esencia2": "Coco",
+        "esencia3": "Vainilla",
+        "precio": "2000",
+        "stock": "20",
+        "idCategoria": "esencias"
+    }
+]
