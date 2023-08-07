@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
+import toast , {Toaster} from "react-hot-toast";
 
 export const ItemCount = ({valInicial, stock, onAdd}) => {
     const [contador, setContador] = useState(valInicial)
@@ -11,14 +11,7 @@ export const ItemCount = ({valInicial, stock, onAdd}) => {
     const agregarCarrito = () => {
         onAdd(contador)
         toast.success(`Agregaste ${contador} productos al carrito!` , {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
+            position : "top-right",
         })
         setVariable(true)
 
@@ -33,7 +26,15 @@ export const ItemCount = ({valInicial, stock, onAdd}) => {
             <button className='btn btn-primary me-3 rounded-pill' onClick={() => restar()}>-</button>
                 {contador}
             <button className='btn btn-primary ms-3 rounded-pill' onClick={() => sumar()}>+</button>
-            <button className={`btn btn-success mt-2 container rounded-pill ${stock === 0 && 'disabled'} ${variable && 'disabled'}`} onClick={() => agregarCarrito()}>Agregar Producto al Carrito</button>
+            {stock <= 0 
+                ?
+                <></>
+                :
+                <button className={`btn btn-success mt-2 container rounded-pill ${variable && 'disabled'}`} onClick={() => agregarCarrito()}>Agregar Producto al Carrito</button>
+
+            }
+            <Toaster
+                />
         </> 
     );
 };

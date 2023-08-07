@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react";
+
 export const SeccionPerfumes = ({item}) => {
 
-    const esencias = ['esencia', 'esencia1', 'esencia2', 'esencia3'];
+    const esencias = ['esencia', 'esencia1', 'esencia2', 'esencia3', 'esencia4'];
+
+    const [muestra, setMuestra] =  useState()   
+
+    useEffect(() => {
+        if (item.esencia !== undefined) {
+            setMuestra(true)
+        }else{
+            setMuestra(false)
+        }
+    })
 
     return (
 
-        <>
+        <div className={`${muestra ? "" : "d-none"}`}>
             <button className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 Perfumes/Esencias
             </button>
@@ -15,8 +27,7 @@ export const SeccionPerfumes = ({item}) => {
                     </div>
                 ))}
             </div>
-        
-        </>
+        </div>
 
     );
 };

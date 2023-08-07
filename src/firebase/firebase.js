@@ -30,6 +30,7 @@ export const cargarDB = async () => {
          esencia1: prod.esencia1,
          esencia2: prod.esencia2,
          esencia3: prod.esencia3,
+         esencia4: prod.esencia4,
          precio: prod.precio,
          stock: prod.stock,
          idCategoria: prod.idCategoria
@@ -40,16 +41,23 @@ export const cargarDB = async () => {
 
 export const añadirPDB = async () => {
    await addDoc(collection(db, 'productos'), {
-      nombre: 'Velas',
-      descripcion: 'Velas aromaticas con varios perfumes',
-      imagenCard: '',
-      esencia: 'Lavanda',
-      esencia1: 'Limón',
-      esencia2: 'Coco',
-      esencia3: 'Vainilla',
-      precio: '400',
-      stock: '3',
-      idCategoria: 'Velas',
+      // nombre: 'Velas',
+      // descripcion: 'Velas aromaticas con varios perfumes',
+      // imagenCard: '',
+      // esencia: 'Lavanda',
+      // esencia1: 'Limón',
+      // esencia2: 'Coco',
+      // esencia3: 'Vainilla',
+      // precio: '400',
+      // stock: '3',
+      // idCategoria: 'Velas',
+
+      nombre: "Frasquitos con fosforos",
+      descripcion: "Frasquito con 20 fosforos para prender velas, sahumerios",
+      imagenCard: "https://firebasestorage.googleapis.com/v0/b/velas-aromaticas-ca1e6.appspot.com/o/img%2FIMG-20230803-WA0020.jpg?alt=media&token=5bdd0215-f1e2-4a39-ba89-9fe77bacc40f",
+      precio:"800",
+      stock: "100",
+      idCategoria: "Accesorios"
    })
 }
 
@@ -96,7 +104,8 @@ export const createOrdenCompra = async(cliente, productos, precioTotal, fecha) =
       datosCliente: cliente,
       productos: productos,
       fecha: fecha,
-      estado: 'pendiente'
+      estado: 'pendiente',
+      precioTotal: precioTotal
    })
    return(ordenCompra)
 }

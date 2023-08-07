@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+.card-productos {
+  margin: 4px;
+  justify-content: center;
+}
+.card-productos .card {
+  width: 18rem;
+  height: 32rem;
+  margin: 10px;
+  background-color: lightpink;
+  box-shadow: 0 0 5px 0px #000000;
+}
+.card-productos .card .contenedor-imagen {
+  height: 50%;
+  border-radius: 10px;
+  border: 1px dashed black;
+  background-color: pink;
+  box-shadow: inset 0 0 2px 0px #000000;
+}
+.card-productos .card .contenedor-imagen .imagen-card {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-productos .card .card-title {
+  font-family: "Roboto Mono", monospace;
+}
+.card-productos .card .card-text {
+  padding-top: 10px;
+  font-family: "Borel", cursive;
+}
+.card-productos .card .contenedor-precio-stock {
+  display: flex;
+  justify-content: space-around;
+}
+.card-productos .card .contenedor-boton-cards {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.card-productos .card .contenedor-boton-cards button {
+  background-color: lightgreen;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=App.css.map */

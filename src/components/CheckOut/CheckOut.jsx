@@ -11,6 +11,12 @@ import { useCarritoContext } from "../../Context/CarritoContext";
 //FireBase
 import { createOrdenCompra, getProduct, uptadeProduct } from "../../firebase/firebase";
 
+// SweetAlert
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+import { alerta } from "./AlertaCheckOut";
+
 
 export const CheckOut = () => {
 
@@ -33,6 +39,8 @@ export const CheckOut = () => {
         setError('')
     }
 
+
+
     const consultarForm = (e) => {
         e.preventDefault()
         const dataForm = new FormData(datosFormulario.current)
@@ -50,6 +58,9 @@ export const CheckOut = () => {
 
             createOrdenCompra(cliente, aux, totalPrice(), new Date().toISOString())
             .then(ordenCompra => {
+                
+                alerta(ordenCompra, totalPrice())
+
                 emptyCart()
                 e.target.reset()
                 navigate("/")

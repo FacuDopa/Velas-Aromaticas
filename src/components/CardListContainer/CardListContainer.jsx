@@ -38,8 +38,8 @@ export const CardListContainer = () => {
         }else{
             getProducts()
             .then(items => {
-                const products = items.filter(prod => prod.stock > 0)
-                const productList = <CardList products={products} Pcarrito={'plantillaCarrito'}/>
+                // const products = items.filter(prod => prod.stock > 0)
+                const productList = <CardList products={items} Pcarrito={'plantillaCarrito'}/>
                 setProductos(productList)
                 serch(items)
             })

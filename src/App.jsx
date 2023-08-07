@@ -1,5 +1,5 @@
 //Css
-import './App.css';
+import './Sass/App.css';
 
 //Modulos
 import { NavBar } from './components/navBar/NavBar';
@@ -23,7 +23,7 @@ import { CarritoProvider } from './Context/CarritoContext';
 function App() {
 
   // cargarDB()
-  // añadirPDB() 
+  // añadirPDB()
 
   return (
     <BrowserRouter>
