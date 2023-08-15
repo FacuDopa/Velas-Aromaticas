@@ -7,8 +7,7 @@ export const Secciones = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item d-flex">
-                    <Link className="nav-link active" to={'/'}>Catalogo</Link>
-                    <Link className="nav-link" to={'/p'}>Prueba</Link>
+                    <Link className="nav-link item-nav" to={'/'}>Catalogo</Link>
                 </li>
                 <Categorias/>
             </ul>

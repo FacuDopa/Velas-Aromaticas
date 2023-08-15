@@ -23,7 +23,41 @@
 
 .navbar {
   background-image: url(../../public/assets/img/2.svg);
-  background-size: auto;
+  background-size: cover;
+}
+.navbar .text-icon {
+  border-bottom: 1px solid white;
+}
+.navbar .item-nav {
+  color: white;
+  text-shadow: 0px 0px 20px white;
+  transition: transform 0.7s;
+}
+.navbar .item-nav:hover:not(.text-icon) {
+  transform: scale(1.2);
+  transition: transform 0.7s;
+}
+.navbar .nav-link.show {
+  color: white;
+  text-shadow: 0px 0px 20px white;
+  transform: scale(1.2);
+  transition: transform 0.7s;
+}
+.navbar .dropdown-menu {
+  background-color: rgb(137, 18, 192);
+  border: 1px solid white;
+}
+.navbar .dropdown-menu * {
+  color: white;
+  transition: background-color 0.5s;
+}
+.navbar .dropdown-menu *:hover {
+  background-color: rgb(99, 15, 138);
+  transition: all 0.5s;
+}
+.navbar .cart-i {
+  color: white;
+  font-size: 2rem;
 }
 
 .barra-busqueda {
@@ -33,9 +67,25 @@
 }
 .barra-busqueda form {
   width: 60vw;
+  border-radius: 7px;
+}
+.barra-busqueda form input {
+  background-color: rgb(219, 145, 157);
+  border-radius: 7px;
+  text-align: center;
+  transition: all 0.5s;
 }
 .barra-busqueda form input::placeholder {
   text-align: center;
+  color: white;
+}
+.barra-busqueda form input:focus {
+  background-color: rgb(243, 171, 183);
+  box-shadow: 0px 0px 15px 0px rgb(243, 171, 183);
+}
+.barra-busqueda form input:focus::placeholder {
+  transition: color 0.5s;
+  color: rgb(243, 171, 183);
 }
 
 .card-productos {
@@ -45,7 +95,7 @@
 .card-productos .card {
   color: rgb(48, 38, 103);
   width: 18rem;
-  height: 32rem;
+  height: 34rem;
   margin: 10px;
   background-color: lightpink;
   box-shadow: 0 0 5px 0px #000000;
@@ -99,6 +149,10 @@
   padding-top: 10px;
 }
 .detail-card .card-body .boton-esencia {
+  background-color: rgb(157, 64, 78);
+  letter-spacing: 0.1rem;
+  font-weight: 100;
+  color: white;
   display: flex;
   margin: 10px;
 }
@@ -115,7 +169,38 @@
 .detail-card .card-body .contenedor-precio-stock-detail {
   font-size: 18px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+}
+.detail-card .card-body .btn-agregar-carrito:hover::after, .detail-card .card-body .btn-agregar-carrito::after, .detail-card .card-body .btn-agregar-carrito:hover, .detail-card .card-body .btn-agregar-carrito {
+  -webkit-transition: all 0.54s;
+  transition: all 0.54s;
+}
+.detail-card .card-body .btn-agregar-carrito {
+  background-color: rgb(157, 64, 78);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+.detail-card .card-body .btn-agregar-carrito:hover {
+  transform: scale(1.04);
+}
+.detail-card .card-body .btn-agregar-carrito::after {
+  content: "";
+  background-color: rgb(119, 49, 60);
+  position: absolute;
+  z-index: -1;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+}
+.detail-card .card-body .btn-agregar-carrito:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=App.css.map */

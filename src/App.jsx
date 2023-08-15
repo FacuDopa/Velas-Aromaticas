@@ -8,8 +8,6 @@ import { CardDetailContainer } from './components/CardDetailConteiner/CardDetail
 import { Cart } from './components/Cart/Cart';
 import { CheckOut } from './components/CheckOut/CheckOut';
 import { Footer } from './components/Footer/Footer';
-import { Test } from './components/Test/Test';
-
 
 //Firebase
 import { cargarDB, añadirPDB  } from './firebase/firebase';
@@ -35,7 +33,6 @@ function App() {
           <Route path='/producto/:id' element={<CardDetailContainer/>}/>
           <Route path='/Carrito' element={<Cart/>}/>
           <Route path='/Checkout' element={<CheckOut/>}/>
-          <Route path='/p' element={<Test/>}/>
         </Routes>
         <Footer/>
       </CarritoProvider>

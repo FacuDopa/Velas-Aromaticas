@@ -4,7 +4,7 @@ export const Categorias = () => {
     return (
         <>
         <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+            <a className="nav-link item-nav dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
             <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" to={'/Categoria/Velas'}>Velas</Link></li>
                 <li><Link className="dropdown-item" to={'/Categoria/Esencias'}>Escencias</Link></li>

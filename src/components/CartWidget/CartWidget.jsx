@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 export const CartWidget = () => {
 
-    const cart = <i className="bi bi-cart" style={{fontSize: '2rem'}}></i>
-    const cartCheck = <i className="bi bi-cart-check" style={{fontSize: '2rem'}}></i>
+    const cart = <i className="bi bi-cart cart-i"></i>
+    const cartCheck = <i className="bi bi-cart-check cart-i"></i>
 
     const {getItemQuantity} = useCarritoContext()
     const [ItemCarrito , setItemCarrito] = useState([cart])

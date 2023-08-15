@@ -10,8 +10,16 @@ export const NavBar = () => {
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <Link className="navbar-brand d-flex" to={'/'}>
-                        <img src={process.env.PUBLIC_URL + '/assets/Logo/Logo.jpg'} alt="Logo" className="d-inline-block align-text-top" width={35} height={35}/>
-                        <p className="ms-2 mb-0">Velas Aromaticas</p>
+                        <img 
+                            src={process.env.PUBLIC_URL + '/assets/Logo/Logo.jpg'} 
+                            alt="Logo" 
+                            className="d-inline-block align-text-top" 
+                            width={45} 
+                            height={45}
+                        />
+                        <div>
+                            <p className="ms-2 mb-0 item-nav text-icon">Velas Aromaticas</p>
+                        </div>
                     </Link>
                     <button
                         className="navbar-toggler"

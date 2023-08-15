@@ -34,9 +34,9 @@ export const SeccionBody = ({item}) => {
                     <ItemCount valInicial={1} stock={item.stock} onAdd={onAdd}/>
                 </>
             }
-            <div>
-                <Link className="me-1" to={'/Carrito'}><button className="btn btn-outline-secondary m-0 mt-2 rounded-pill btn-finalizar-C">Finalizar Compra</button></Link>
-                <Link to={'/'}><button className="btn btn-outline-secondary m-0 mt-2 rounded-pill btn-seguir-C">Seguir Comprando</button></Link>
+            <div className="ms-2">
+                <Link className="me-1" to={'/Carrito'}><button className="btn btn-outline-light m-0 mt-2 rounded-pill btn-finalizar-C">Finalizar Compra</button></Link>
+                <Link to={'/'}><button className="btn btn-outline-light m-0 mt-2 rounded-pill btn-seguir-C">Seguir Comprando</button></Link>
             </div>
         </>
     );
