@@ -18,7 +18,7 @@ export const Cards = ({item}) => {
                     </p>
                     {item.stock <= 0
                         ?
-                        <p className="text-danger">
+                        <p className="sin-stock">
                             Sin Stock   
                         </p>
                         :
@@ -28,7 +28,7 @@ export const Cards = ({item}) => {
                     }
                 </div>
                 <div className="contenedor-boton-cards">
-                    <Link className="nav-link" to={`/producto/${item.id}`}><button className='btn btn-primary btn-outline-secondary rounded-pill'>Ver Producto</button></Link>
+                    <Link className="nav-link" to={`/producto/${item.id}`}><button className='btn btn-primary btn-outline-secondary rounded-pill boton-card'>Ver Producto</button></Link>
                 </div>
             </div>
         </>

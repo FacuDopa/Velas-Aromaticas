@@ -1,10 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Borel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+.detail-card .card-body .titulo-card, .card-productos .card .card-title {
+  font-family: "Lilita One", cursive;
+}
+
+.detail-card .card-body .contenedor-precio-stock-detail, .detail-card .card-body .esencias, .detail-card .card-body .desc-card, .card-productos .card .contenedor-precio-stock, .card-productos .card .card-text {
+  font-family: "Borel", cursive;
+}
+
+.detail-card .card-body .boton-esencia, .card-productos .card .contenedor-boton-cards .boton-card {
+  color: black;
+  background-color: lightgreen;
+  border: 1px solid rgb(173, 173, 173);
+  font-family: "Lilita One", cursive;
+  transition: scale 0.3s;
+}
+.detail-card .card-body .boton-esencia:hover, .card-productos .card .contenedor-boton-cards .boton-card:hover {
+  scale: 1.1;
+  transition: scale 0.3s;
+}
+
+.navbar {
+  background-image: url(../../public/assets/img/2.svg);
+  background-size: auto;
+}
+
+.barra-busqueda {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.barra-busqueda form {
+  width: 60vw;
+}
+.barra-busqueda form input::placeholder {
+  text-align: center;
+}
+
 .card-productos {
   margin: 4px;
   justify-content: center;
 }
 .card-productos .card {
+  color: rgb(48, 38, 103);
   width: 18rem;
   height: 32rem;
   margin: 10px;
@@ -23,25 +62,60 @@
   height: 100%;
   object-fit: contain;
 }
-.card-productos .card .card-title {
-  font-family: "Roboto Mono", monospace;
-}
 .card-productos .card .card-text {
   padding-top: 10px;
-  font-family: "Borel", cursive;
 }
 .card-productos .card .contenedor-precio-stock {
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
+}
+.card-productos .card .contenedor-precio-stock .sin-stock {
+  color: white;
+  background-color: rgba(200, 31, 31, 0.89);
+  border-radius: 7px;
+  padding: 10px 3px 0px 3px;
 }
 .card-productos .card .contenedor-boton-cards {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
-.card-productos .card .contenedor-boton-cards button {
-  background-color: lightgreen;
-  border: 1px solid black;
+.detail-card {
+  padding: 0px;
+  background-color: lightpink;
+}
+.detail-card img {
+  border-radius: 14px;
+}
+.detail-card .card-body {
+  text-align: center;
+}
+.detail-card .card-body .titulo-card {
+  font-size: 25px;
+}
+.detail-card .card-body .desc-card {
+  font-size: 20px;
+  padding-top: 10px;
+}
+.detail-card .card-body .boton-esencia {
+  display: flex;
+  margin: 10px;
+}
+.detail-card .card-body .esencias {
+  font-size: 20px;
+  background-color: rgb(206, 121, 134);
+  transition: 0.3s;
+}
+.detail-card .card-body .esencias:hover {
+  color: white;
+  background-color: rgb(157, 64, 78);
+  transition: 0.3s;
+}
+.detail-card .card-body .contenedor-precio-stock-detail {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=App.css.map */

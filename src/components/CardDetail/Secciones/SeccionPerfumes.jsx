@@ -17,13 +17,15 @@ export const SeccionPerfumes = ({item}) => {
     return (
 
         <div className={`${muestra ? "" : "d-none"}`}>
-            <button className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <button className="btn btn-primary boton-esencia" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 Perfumes/Esencias
             </button>
             <div className="collapse" id="collapseExample">
                 {esencias.map((esencia, index) => (
-                    <div key={index} className="card card-body">
-                        {item[esencia]}
+                    <div key={index} className="card card-body esencias p-0 pt-3">
+                        <p className="p-0 m-0">
+                            {item[esencia]}
+                        </p>
                     </div>
                 ))}
             </div>

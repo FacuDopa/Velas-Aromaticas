@@ -23,18 +23,19 @@ export const ItemCount = ({valInicial, stock, onAdd}) => {
 
     return (
         <>  
-            <button className='btn btn-primary me-3 rounded-pill' onClick={() => restar()}>-</button>
-                {contador}
-            <button className='btn btn-primary ms-3 rounded-pill' onClick={() => sumar()}>+</button>
+            <div className="d-flex ms-5">
+                <button className='btn btn-outline-secondary me-3 rounded-pill' onClick={() => restar()}>-</button>
+                    {contador}
+                <button className='btn btn-outline-secondary ms-3 rounded-pill' onClick={() => sumar()}>+</button>
+            </div>
             {stock <= 0 
                 ?
                 <></>
                 :
-                <button className={`btn btn-success mt-2 container rounded-pill ${variable && 'disabled'}`} onClick={() => agregarCarrito()}>Agregar Producto al Carrito</button>
+                <button className={`btn-agregar-carritos btn btn-success mt-2 container rounded-pill ${variable && 'disabled'}`} onClick={() => agregarCarrito()}>Agregar Producto al Carrito</button>
 
             }
-            <Toaster
-                />
+            <Toaster/>
         </> 
     );
 };

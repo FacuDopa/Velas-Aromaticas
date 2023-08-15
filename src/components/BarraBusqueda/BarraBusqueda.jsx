@@ -1,6 +1,6 @@
 export const BarraBusqueda = ({Categoria, busq, setBusq}) => {
     return (
-        <div className={`row ${Categoria ? 'd-none' : 'd-flex'} m-0`}>
+        <div className={`${Categoria ? 'd-none' : 'barra-busqueda'}`}>
             <form className="d-flex" role="search">
                 <input 
                     className="form-control me-2" 
@@ -10,7 +10,6 @@ export const BarraBusqueda = ({Categoria, busq, setBusq}) => {
                     aria-label="Search"
                     onChange={e => setBusq(e.target.value)}
                 />
-                <button className="btn btn-outline-success">Search</button>
             </form>
         </div>
     );

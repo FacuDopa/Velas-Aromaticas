@@ -13,30 +13,31 @@ export const SeccionBody = ({item}) => {
 
     return (
         <>
-            <h5 className="card-title">{item.nombre}</h5>
-            <p className="card-text">{item.descripcion}</p>
+            <h5 className="card-title titulo-card">{item.nombre}</h5>
+            <p className="card-text desc-card">{item.descripcion}</p>
             <SeccionPerfumes item={item}/>
-            <p>Precio: $ {new Intl.NumberFormat('de-DE').format(item.precio)}</p>
             {item.stock === 0
-                            ?
-                            <p className="text-danger">
-                                Sin Stock   
-                            </p>
-                            :
-
-                            <div style={{display: 'flex', }}>
-                                <div style={{width: '50%'}}>
-                                    $ {new Intl.NumberFormat('de-DE').format(item.precio)}
-                                </div>
-                                <div style={{width: '50%'}}>
-                                    Stock: {item.stock} n
-                                </div>
-                            </div>
-                            
-                        }
-            <ItemCount valInicial={1} stock={item.stock} onAdd={onAdd}/>
-            <Link className="me-1" to={'/Carrito'}><button className="btn btn-primary mt-2 rounded-pill">Finalizar Compra</button></Link>
-            <Link className="me-1" to={'/'}><button className="btn btn-primary mt-2 rounded-pill">Seguir Comprando</button></Link>
+                ?
+                    <p className="text-danger">
+                        Sin Stock   
+                    </p>
+                :
+                <>
+                    <div className="contenedor-precio-stock-detail mt-3">
+                        <div>
+                            Precio: $ {new Intl.NumberFormat('de-DE').format(item.precio)}
+                        </div>
+                        <div>
+                            Stock: {item.stock}
+                        </div>
+                    </div>            
+                    <ItemCount valInicial={1} stock={item.stock} onAdd={onAdd}/>
+                </>
+            }
+            <div>
+                <Link className="me-1" to={'/Carrito'}><button className="btn btn-outline-secondary m-0 mt-2 rounded-pill btn-finalizar-C">Finalizar Compra</button></Link>
+                <Link to={'/'}><button className="btn btn-outline-secondary m-0 mt-2 rounded-pill btn-seguir-C">Seguir Comprando</button></Link>
+            </div>
         </>
     );
 };

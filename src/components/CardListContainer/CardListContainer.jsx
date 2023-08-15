@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { getProducts } from "../../firebase/firebase";
 import { BarraBusqueda } from "../BarraBusqueda/BarraBusqueda";
 
+import { CSSTransition, SwitchTransition } from "react-transition-group";
+
 export const CardListContainer = () => {
 
     const [productos, setProductos] = useState([])
@@ -49,10 +51,13 @@ export const CardListContainer = () => {
     return (
         <>  
             <BarraBusqueda Categoria={idCategoria} busq={busqueda} setBusq={setBusqueda}/>
+            {/* <SwitchTransition>
+                <CSSTransition classNames='fade' key={productos} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}>
+                </CSSTransition>
+            </SwitchTransition> */}
             <div className="row card-productos">
                 {productos}
             </div>
-
         </>
 
     );
