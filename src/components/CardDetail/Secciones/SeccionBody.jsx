@@ -18,9 +18,11 @@ export const SeccionBody = ({item}) => {
             <SeccionPerfumes item={item}/>
             {item.stock === 0
                 ?
-                    <p className="text-danger">
-                        Sin Stock   
-                    </p>
+                    <div className="d-flex justify-content-center">
+                        <p className="sin-stock">
+                            Sin Stock   
+                        </p>
+                    </div>
                 :
                 <>
                     <div className="contenedor-precio-stock-detail mt-3">

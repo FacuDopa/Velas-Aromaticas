@@ -5,7 +5,7 @@
   font-family: "Lilita One", cursive;
 }
 
-.detail-card .card-body .contenedor-precio-stock-detail, .detail-card .card-body .esencias, .detail-card .card-body .desc-card, .card-productos .card .contenedor-precio-stock, .card-productos .card .card-text {
+.detail-card .card-body .contenedor-precio-stock-detail, .detail-card .card-body .sin-stock, .detail-card .card-body .esencias, .detail-card .card-body .desc-card, .card-productos .card .contenedor-precio-stock, .card-productos .card .card-text {
   font-family: "Borel", cursive;
 }
 
@@ -21,8 +21,28 @@
   transition: scale 0.3s;
 }
 
+.detail-card .card-body .sin-stock, .card-productos .card .contenedor-precio-stock .sin-stock {
+  color: white;
+  background-color: rgba(200, 31, 31, 0.89);
+  border-radius: 7px;
+  padding: 10px 3px 0px 3px;
+}
+
+.detail-card, .card-productos .card {
+  background-color: lightpink;
+}
+
+.detail-card .card-body .btn-agregar-carrito:hover::after, .detail-card .card-body .btn-agregar-carrito::after, .detail-card .card-body .btn-agregar-carrito:hover, .detail-card .card-body .btn-agregar-carrito {
+  -webkit-transition: all 0.54s;
+  transition: all 0.54s;
+}
+
+.div-carrito-vacio .btn-carrito-vacio:active, .div-carrito-vacio .btn-carrito-vacio, .detail-card .card-body .btn-agregar-carrito, .detail-card .card-body .esencias:hover, .detail-card .card-body .boton-esencia {
+  background-color: rgb(157, 64, 78);
+}
+
 .navbar {
-  background-image: url(../../public/assets/img/2.svg);
+  background-image: url(../../public/assets/img/svg-nav.svg);
   background-size: cover;
 }
 .navbar .text-icon {
@@ -58,6 +78,15 @@
 .navbar .cart-i {
   color: white;
   font-size: 2rem;
+}
+.navbar .cantidad-carrito {
+  color: white;
+  background-color: darkmagenta;
+  display: flex;
+  border-radius: 40%;
+  height: 20px;
+  width: 20px;
+  justify-content: center;
 }
 
 .barra-busqueda {
@@ -97,7 +126,6 @@
   width: 18rem;
   height: 34rem;
   margin: 10px;
-  background-color: lightpink;
   box-shadow: 0 0 5px 0px #000000;
 }
 .card-productos .card .contenedor-imagen {
@@ -120,12 +148,6 @@
   justify-content: space-around;
   align-items: flex-end;
 }
-.card-productos .card .contenedor-precio-stock .sin-stock {
-  color: white;
-  background-color: rgba(200, 31, 31, 0.89);
-  border-radius: 7px;
-  padding: 10px 3px 0px 3px;
-}
 .card-productos .card .contenedor-boton-cards {
   display: flex;
   justify-content: center;
@@ -133,7 +155,6 @@
 }
 .detail-card {
   padding: 0px;
-  background-color: lightpink;
 }
 .detail-card img {
   border-radius: 14px;
@@ -149,7 +170,6 @@
   padding-top: 10px;
 }
 .detail-card .card-body .boton-esencia {
-  background-color: rgb(157, 64, 78);
   letter-spacing: 0.1rem;
   font-weight: 100;
   color: white;
@@ -163,7 +183,6 @@
 }
 .detail-card .card-body .esencias:hover {
   color: white;
-  background-color: rgb(157, 64, 78);
   transition: 0.3s;
 }
 .detail-card .card-body .contenedor-precio-stock-detail {
@@ -171,12 +190,7 @@
   display: flex;
   flex-direction: column;
 }
-.detail-card .card-body .btn-agregar-carrito:hover::after, .detail-card .card-body .btn-agregar-carrito::after, .detail-card .card-body .btn-agregar-carrito:hover, .detail-card .card-body .btn-agregar-carrito {
-  -webkit-transition: all 0.54s;
-  transition: all 0.54s;
-}
 .detail-card .card-body .btn-agregar-carrito {
-  background-color: rgb(157, 64, 78);
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -201,6 +215,22 @@
   right: 0;
   top: 0;
   bottom: 0;
+}
+
+.div-carrito-vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 268.88px);
+}
+.div-carrito-vacio .btn-carrito-vacio {
+  transition: transform 0.7s;
+}
+.div-carrito-vacio .btn-carrito-vacio:hover {
+  background-color: rgb(119, 49, 60);
+  transform: scale(1.08);
+  transition: transform 0.7s;
 }
 
 /*# sourceMappingURL=App.css.map */

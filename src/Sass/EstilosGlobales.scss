@@ -24,9 +24,30 @@
   }
 }
 
+%no-stock{
+  color: white;
+  background-color: rgb(200 31 31 / 89%);
+  border-radius: 7px;
+  padding: 10px 3px 0px 3px;
+}
+
+%fondo-cards{
+  background-color: lightpink;
+}
+
+// Transicion del boton Agrgar al Carrito
+%transition{
+  -webkit-transition: all 0.54s;
+  transition: all 0.54s;
+}
+
+%bg-color-card_detail{
+  background-color: rgb(157 64 78);
+}
+
 //Nav Bar
 .navbar{
-  background-image: url(../../public/assets/img/2.svg);
+  background-image: url(../../public/assets/img/svg-nav.svg);
   background-size: cover;
   
   .text-icon{
@@ -71,6 +92,16 @@
     color: white;
     font-size: 2rem;
   }
+
+  .cantidad-carrito{
+    color: white;
+    background-color: darkmagenta;
+    display: flex;
+    border-radius: 40%;
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+  }
 }
 
 // Barra Busqueda
@@ -104,7 +135,6 @@
         }
       }
     }
-    
   }
 }
 
@@ -118,7 +148,7 @@
     width: 18rem;
     height: 34rem;
     margin: 10px;
-    background-color: lightpink;
+    @extend %fondo-cards;
     box-shadow: 0 0 5px 0px #000000;
     
     .contenedor-imagen{
@@ -147,14 +177,11 @@
     .contenedor-precio-stock{
       display: flex;
       justify-content: space-around;
-      @extend %font-descripcion;
       align-items: flex-end;
+      @extend %font-descripcion;
       
       .sin-stock{
-        color: white;
-        background-color: rgb(200 31 31 / 89%);
-        border-radius: 7px;
-        padding: 10px 3px 0px 3px;
+        @extend %no-stock;
       }
     }
     
@@ -173,7 +200,7 @@
 // Card detail
 .detail-card{
   padding: 0px;
-  background-color: lightpink;
+  @extend %fondo-cards;
   
   img{
     border-radius: 14px;
@@ -195,7 +222,7 @@
 
     .boton-esencia{
       @extend %boton-cards;
-      background-color: rgb(157 64 78);
+      @extend %bg-color-card_detail;
       letter-spacing: 0.1rem;
       font-weight: 100;
       color: white;
@@ -211,10 +238,15 @@
 
       &:hover{
         color: white;
-        background-color: rgb(157 64 78);
+        @extend %bg-color-card_detail;
         transition: 0.3s; 
       }
     }
+
+    .sin-stock{
+      @extend %no-stock;
+      @extend %font-descripcion;
+      } 
 
     .contenedor-precio-stock-detail{
       @extend %font-descripcion;
@@ -223,14 +255,8 @@
       flex-direction: column;
     }
 
-    // Transicion del boton Agrgar al Carrito
-    %transition{
-      -webkit-transition: all 0.54s;
-      transition: all 0.54s;
-    }
-
     .btn-agregar-carrito{
-      background-color: rgb(157 64 78);
+      @extend %bg-color-card_detail;
       position: relative;
       z-index: 1;
       overflow: hidden;
@@ -262,6 +288,30 @@
         bottom: 0;
         @extend %transition;
       }
+    }
+  }
+}
+
+// Seccion Carrito
+.div-carrito-vacio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 268.88px);
+
+  .btn-carrito-vacio{
+    @extend %bg-color-card_detail;
+    transition: transform 0.7s;
+
+    &:hover{
+      background-color: rgb(119, 49, 60);
+      transform: scale(1.08);
+      transition: transform 0.7s;
+    }
+
+    &:active{
+      @extend %bg-color-card_detail ;
     }
   }
 }

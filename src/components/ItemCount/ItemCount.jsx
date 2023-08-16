@@ -3,7 +3,6 @@ import toast , {Toaster} from "react-hot-toast";
 
 export const ItemCount = ({valInicial, stock, onAdd}) => {
     const [contador, setContador] = useState(valInicial)
-    const [contador2, setContador2] = useState([])
     const [variable, setVariable] = useState(false)
 
     const sumar = () => (contador < stock) && setContador(contador + 1)
@@ -11,7 +10,11 @@ export const ItemCount = ({valInicial, stock, onAdd}) => {
     const agregarCarrito = () => {
         onAdd(contador)
         toast.success(`Agregaste ${contador} productos al carrito!` , {
-            position : "top-right",
+            position : "top-center",
+            style : {
+                background: 'lightpink',
+                color: 'white'
+            }
         })
         setVariable(true)
 

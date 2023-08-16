@@ -12,7 +12,7 @@ export const Cart = () => {
                     <div className="div-carrito-vacio">
                         <h2>Carrito sin productos</h2>
                         <p>Primero debes agregar productos al carrito</p>
-                        <Link className='nav-link' to={'/'}><button className='btn btn-primary mx-2 rounded-pill'>Continuar Comprando</button></Link>
+                        <Link className='nav-link' to={'/'}><button className='btn-carrito-vacio btn btn-primary mx-2 rounded-pill'>Continuar Comprando</button></Link>
                     </div>
                 :
                     <div className="container cart-container">
