@@ -8,7 +8,7 @@ export const NavBar = () => {
         <>
         <header>
             <nav className="navbar navbar-expand-lg">
-                <div className="container-fluid">
+                <div className="container-fluid div-nav-mediaquerie">
                     <Link className="navbar-brand d-flex" to={'/'}>
                         <img 
                             src={process.env.PUBLIC_URL + '/assets/Logo/Logo.jpg'} 
@@ -29,7 +29,7 @@ export const NavBar = () => {
                         aria-controls="navbarNavDropdown"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
-                    >
+                        >
                         <span className="navbar-toggler-icon" />
                     </button>
                     <Secciones/>

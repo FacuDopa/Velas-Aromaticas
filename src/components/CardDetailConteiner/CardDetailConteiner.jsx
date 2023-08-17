@@ -17,7 +17,6 @@ export const CardDetailContainer = () => {
     return (
         <>
             <CardDetail  item={producto}/>
-            <h2 className='my-4'>Mas de Nuestros productos</h2>
         </>
     );
 }

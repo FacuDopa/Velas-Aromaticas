@@ -30,6 +30,5 @@ export const SeccionPerfumes = ({item}) => {
                 ))}
             </div>
         </div>
-
     );
 };

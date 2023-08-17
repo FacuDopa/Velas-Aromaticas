@@ -26,17 +26,17 @@ export const SeccionBody = ({item}) => {
                 :
                 <>
                     <div className="contenedor-precio-stock-detail mt-3">
-                        <div>
+                        <div className="precio">
                             Precio: $ {new Intl.NumberFormat('de-DE').format(item.precio)}
                         </div>
-                        <div>
+                        <div className="stock">
                             Stock: {item.stock}
                         </div>
                     </div>            
                     <ItemCount valInicial={1} stock={item.stock} onAdd={onAdd}/>
                 </>
             }
-            <div className="ms-2">
+            <div className="ms-2 div-finalizar-seguir-compra">
                 <Link className="me-1" to={'/Carrito'}><button className="btn btn-outline-light m-0 mt-2 rounded-pill btn-finalizar-C">Finalizar Compra</button></Link>
                 <Link to={'/'}><button className="btn btn-outline-light m-0 mt-2 rounded-pill btn-seguir-C">Seguir Comprando</button></Link>
             </div>

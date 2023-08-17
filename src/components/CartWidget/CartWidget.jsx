@@ -20,7 +20,7 @@ export const CartWidget = () => {
     },[getItemQuantity()])
 
     return (
-        <Link className="nav-link" to={'/Carrito'}>
+        <Link className="nav-link link-carrito-W mt-1" to={'/Carrito'}>
 
             <div
                 onMouseOver={() => {
@@ -33,6 +33,7 @@ export const CartWidget = () => {
                         setItemCarrito(cart)
                     }
                 }}
+                className="div-carrito-w"
             >
                 {getItemQuantity() > 0 && <span className="cantidad-carrito">{getItemQuantity()}</span>}
                 {ItemCarrito}
